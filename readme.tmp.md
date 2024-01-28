@@ -1,60 +1,38 @@
 # Task Manager Project
 
-This project is a simple Task Manager implemented in Python. It allows users to manage tasks by performing various operations such as adding tasks, marking them as completed, viewing the task list, updating task details, and deleting tasks.
+Welcome to Your Personal Task Manager! This project is a simple task management system with user authentication and database integration.
 
-## Concepts Used
+## Features
 
-1. **Variables and Data Types:**
-   - Utilized variables to store task information such as name, description, and completion status.
-   - Used various data types such as strings and booleans to represent different aspects of a task.
+1. **User Authentication**
+   - **Register:** Users can register by providing a valid username and password.
+   - **Login:** Existing users can log in with their registered credentials.
+   - **Logout:** Users can log out to secure their session.
 
-2. **Control Flow (if, else, elif):**
-   - Implemented control flow statements for handling user choices and executing corresponding actions.
+2. **Task Management (CRUD Operations)**
+   - **Add Task:** Users can add new tasks with a name and an optional description.
+   - **Mark Task as Completed:** Mark tasks as completed to track progress.
+   - **View Tasks:** Display the list of tasks with their details.
+   - **Update Task:** Modify the name or description of an existing task.
+   - **Delete Task:** Remove a task from the list.
 
-3. **Lists and Loops:**
-   - Utilized lists to store multiple tasks.
-   - Implemented loops for iterating through tasks and presenting them to the user.
+3. **Password Validation**
+   - Custom validation ensures that passwords:
+     - Have a minimum length of 8 characters.
+     - Include at least one uppercase letter, one lowercase letter, and one digit.
 
-4. **Functions:**
-   - Defined functions for modularizing code and encapsulating specific functionalities (e.g., adding a task, marking completed).
-
-5. **User Input and Validation:**
-   - Used `input()` to get user input for task details and menu choices.
-   - Implemented basic input validation to handle empty inputs and invalid input types.
-
-6. **Error Handling:**
-   - Incorporated `try...except` blocks to handle potential errors during user input.
-
-7. **File Structure:**
-   - Organized the code into functions and structured the file with a main script.
-
-## Methods
-
-### `show_menu()`
-- Displays the Task Manager menu with various options.
-
-### `add_task()`
-- Adds a new task to the task list, collecting the task name and an optional brief description from the user.
-
-### `mark_completed()`
-- Marks a task as completed based on user input.
-
-### `view_tasks()`
-- Displays the list of tasks, including their names, completion status, and optional descriptions.
-
-### `update_task()`
-- Updates the name or description of an existing task based on user input.
-
-### `delete_task()`
-- Deletes a task from the task list based on user input.
-
-### `main()`
-- Runs the Task Manager application, managing the flow of the program based on user choices.
-
+4. **Password Encryption**
+   - Passwords are securely stored using SHA-256 hashing.
+5. **User Interface**
+   -The project is implemented as a console-based application, where users interact with the program by entering choices and providing input through the command line.
+6. **Database Integration**
+   -The application uses an SQLite database named "task_manager.db" to store information about users and their tasks.
+   -Two tables are created in the database: "users" and "tasks." The "users" table stores user information, including their username and hashed password. The "tasks" table stores task details, including the task name, description, completion status, and a foreign key reference to the user who created the task.
+7. **Menu System**
+   -The application provides a simple menu system for users to choose various actions, including adding tasks, marking tasks as completed, viewing tasks, updating tasks, deleting tasks, and logging out.
 ## How to Run
-1. Ensure you have Python installed on your machine.
-2. Clone the repository or download the `tmp.py` file.
-3. Open a terminal or command prompt and navigate to the directory containing the script.
-4. Run the script using the command: `python tmp.py` (or `python3 tmp.py` for Python 3).
 
-Feel free to explore, modify, and enhance the code based on your preferences!
+1. Install the required dependencies:
+
+   ```bash
+   pip install pillow 
